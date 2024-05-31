@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zizou la Moula et sa Bande</title>
+    <style>
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.03);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes monkeyMove {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(200px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes monkeyJump {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-100px);
+            }
+             100% {
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            background: url(images/Zizou.png) repeat center center;
+            background-size: contain;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        header {
+            background-color: rgba(255, 105, 180, 0.8);
+            color: white;
+            padding: 20px;
+            font-size: 3em;
+            animation: bounce 2s infinite;
+        }
+
+        .content {
+            padding: 50px;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .character {
+            display: inline-block;
+            margin: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            font-size: 40px;
+            color: white;
+            animation: pulse 2s infinite;
+        }
+
+        .character img {
+            width: 380px;
+            height: auto;
+            border: 2px solid #ff69b4;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .character img:hover {
+            transform: scale(1.05);
+            animation: zoom 0.3s forwards;
+        }
+
+        .monkey1 {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 200px;
+            height: auto;
+            animation: monkeyMove 5s infinite;
+        }
+
+        .monkey2 {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 200px;
+            height: auto;
+            animation: monkeyJump 2s infinite;
+        }
+
+        footer {
+            background-color: rgba(255, 105, 180, 0.8);
+            color: white;
+            padding: 10px;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <header>Zizou la Moula et sa Bande</header>
+    <div class="content">
+        <div class="character">
+            <a href="https://www.youtube.com/shorts/EgRedynqmC0?feature=share" target="_blank">
+                <img src="images/zizou_combat.jpg" alt="Combat Zizou vs Zotto" />
+            </a>
+            <p>Combat Zizou vs Zotto</p>
+        </div>
+        <div class="character">
+            <a href="https://www.youtube.com/shorts/uJ4pkVtEwhU?feature=share" target="_blank">
+                <img src="images/zizou_danse.jpg" alt="Zizou danse" />
+            </a>
+            <p>Zizou style</p>
+        </div>
+        <div class="character">
+            <a href="https://www.youtube.com/shorts/LPerMzn9lDU" target="_blank">
+                <img src="images/Tour_de_magie.jpg" alt="Tour de magie" />
+            </a>
+            <p>Tour de magie</p>
+        </div>
+    </div>
+    <footer>Fête et Aventures avec Zizou la Moula!</footer>
+    <img src="images/zizou_mowgli.jpg" alt="Petit Singe" class="monkey1" />
+    <img src="images/mowgli_debut.jpg" alt="Petit Singe" class="monkey2" />
+</body>
+</html>
